@@ -16,21 +16,6 @@ const Hero = () => {
         <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-8">
           A nostalgic farewell to 2025, capturing moments in the warm glow of memories
         </p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button 
-            className="bg-golden-orange text-white hover:bg-amber-600 px-6 py-6 text-lg"
-            onClick={() => window.location.href = '/memories'}
-          >
-            Explore Memories
-          </Button>
-          <Button 
-            variant="outline" 
-            className="border-golden-orange text-golden-orange hover:bg-golden-orange/10 px-6 py-6 text-lg"
-            onClick={() => window.location.href = '/gallery'}
-          >
-            View Gallery
-          </Button>
-        </div>
         <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-float">
           <Button 
             variant="ghost" 

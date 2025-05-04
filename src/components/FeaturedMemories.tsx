@@ -4,7 +4,17 @@ import { Button } from '@/components/ui/button';
 import { LinkIcon } from 'lucide-react';
 
 const FeaturedMemories = () => {
-  const [link, setLink] = useState('');
+  // Pre-fill with a random memory link
+  const randomLinks = [
+    'https://memories.goldenhour.com/sunset-beach-2025',
+    'https://goldenmemories.com/family-reunion-summer',
+    'https://moments.farewell25.com/graduation-ceremony',
+    'https://share.farewell25.com/concert-memories',
+    'https://gallery.farewell25.com/wedding-day'
+  ];
+  
+  const randomLink = randomLinks[Math.floor(Math.random() * randomLinks.length)];
+  const [link, setLink] = useState(randomLink);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
