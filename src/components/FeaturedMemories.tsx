@@ -1,15 +1,25 @@
 
 import { Button } from '@/components/ui/button';
-import { LinkIcon } from 'lucide-react';
+import { LinkIcon, Copy } from 'lucide-react';
+import { toast } from "@/components/ui/sonner";
 
 const FeaturedMemories = () => {
   // Fixed Google Drive link as a constant
   const fixedLink = 'https://drive.google.com/drive/folders/1234567890abcdefghijklmnopqrstuvwxyz';
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Process the link
-    console.log('Memory link submitted:', fixedLink);
+  const handleShareMemory = async () => {
+    try {
+      await navigator.clipboard.writeText(fixedLink);
+      toast.success("Link copied to clipboard", {
+        description: "You can now share it with others"
+      });
+      console.log('Memory link submitted:', fixedLink);
+    } catch (err) {
+      toast.error("Failed to copy link", {
+        description: "Please try again"
+      });
+      console.error('Failed to copy link:', err);
+    }
   };
 
   return (
@@ -23,7 +33,7 @@ const FeaturedMemories = () => {
         </div>
 
         <div className="bg-card border rounded-lg shadow-md p-6">
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <div className="space-y-4">
             <div className="relative">
               <label htmlFor="memory-link" className="block text-sm font-medium mb-2">
                 Memory Link
@@ -37,18 +47,19 @@ const FeaturedMemories = () => {
                     value={fixedLink}
                     readOnly
                     className="pl-10 pr-4 py-3 w-full rounded-l-md border border-r-0 focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-50"
-                    required
                   />
                 </div>
                 <Button 
-                  type="submit" 
-                  className="bg-golden-orange text-white hover:bg-amber-600 rounded-l-none"
+                  type="button" 
+                  className="bg-golden-orange text-white hover:bg-amber-600 rounded-l-none flex items-center gap-2"
+                  onClick={handleShareMemory}
                 >
-                  Share
+                  <Copy size={16} />
+                  Copy Link
                 </Button>
               </div>
             </div>
-          </form>
+          </div>
           <div className="mt-6 text-sm text-muted-foreground">
             <p>Share links to your favorite memories, photos, videos or any other content that represents your golden moments of 2025.</p>
           </div>
