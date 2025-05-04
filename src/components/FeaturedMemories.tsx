@@ -4,17 +4,8 @@ import { Button } from '@/components/ui/button';
 import { LinkIcon } from 'lucide-react';
 
 const FeaturedMemories = () => {
-  // Pre-fill with a random memory link
-  const randomLinks = [
-    'https://memories.goldenhour.com/sunset-beach-2025',
-    'https://goldenmemories.com/family-reunion-summer',
-    'https://moments.farewell25.com/graduation-ceremony',
-    'https://share.farewell25.com/concert-memories',
-    'https://gallery.farewell25.com/wedding-day'
-  ];
-  
-  const randomLink = randomLinks[Math.floor(Math.random() * randomLinks.length)];
-  const [link, setLink] = useState(randomLink);
+  // Fixed Google Drive link
+  const [link, setLink] = useState('https://drive.google.com/drive/folders/1234567890abcdefghijklmnopqrstuvwxyz');
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -48,7 +39,7 @@ const FeaturedMemories = () => {
                     type="url"
                     value={link}
                     onChange={(e) => setLink(e.target.value)}
-                    placeholder="https://example.com/my-golden-memory"
+                    placeholder="https://drive.google.com/drive/folders/example"
                     className="pl-10 pr-4 py-3 w-full rounded-l-md border border-r-0 focus:outline-none focus:ring-2 focus:ring-amber-500"
                     required
                   />
