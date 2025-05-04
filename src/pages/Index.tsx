@@ -5,7 +5,6 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import FeaturedMemories from '@/components/FeaturedMemories';
 import Quote from '@/components/Quote';
-import Footer from '@/components/Footer';
 
 const Index = () => {
   // Scroll to top on page load
@@ -24,7 +23,6 @@ const Index = () => {
         <Hero />
         <FeaturedMemories />
         <Quote />
-        <Footer />
       </div>
     </div>
   );

@@ -35,9 +35,6 @@ const Navbar = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <Link to="/" className="font-medium text-foreground/80 hover:text-primary transition-colors">Home</Link>
-            <Link to="/about" className="font-medium text-foreground/80 hover:text-primary transition-colors">About</Link>
-            <Link to="/memories" className="font-medium text-foreground/80 hover:text-primary transition-colors">Memories</Link>
-            <Link to="/gallery" className="font-medium text-foreground/80 hover:text-primary transition-colors">Gallery</Link>
             <Button className="bg-golden-orange text-white hover:bg-amber-600 font-semibold">
               Share Memory
             </Button>
@@ -58,9 +55,6 @@ const Navbar = () => {
         <nav className="md:hidden glass-dark mt-3 py-4">
           <div className="container flex flex-col gap-4 items-center">
             <Link to="/" className="font-medium text-foreground/80 py-2">Home</Link>
-            <Link to="/about" className="font-medium text-foreground/80 py-2">About</Link>
-            <Link to="/memories" className="font-medium text-foreground/80 py-2">Memories</Link>
-            <Link to="/gallery" className="font-medium text-foreground/80 py-2">Gallery</Link>
             <Button className="bg-golden-orange text-white hover:bg-amber-600 font-semibold w-full mt-2">
               Share Memory
             </Button>
