@@ -1,18 +1,15 @@
 
-import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { LinkIcon } from 'lucide-react';
 
 const FeaturedMemories = () => {
-  // Fixed Google Drive link
-  const [link, setLink] = useState('https://drive.google.com/drive/folders/1234567890abcdefghijklmnopqrstuvwxyz');
+  // Fixed Google Drive link as a constant
+  const fixedLink = 'https://drive.google.com/drive/folders/1234567890abcdefghijklmnopqrstuvwxyz';
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Process the link (this could be expanded later)
-    console.log('Memory link submitted:', link);
-    // Clear the input after submission
-    setLink('');
+    // Process the link
+    console.log('Memory link submitted:', fixedLink);
   };
 
   return (
@@ -37,10 +34,9 @@ const FeaturedMemories = () => {
                   <input
                     id="memory-link"
                     type="url"
-                    value={link}
-                    onChange={(e) => setLink(e.target.value)}
-                    placeholder="https://drive.google.com/drive/folders/example"
-                    className="pl-10 pr-4 py-3 w-full rounded-l-md border border-r-0 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                    value={fixedLink}
+                    readOnly
+                    className="pl-10 pr-4 py-3 w-full rounded-l-md border border-r-0 focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-50"
                     required
                   />
                 </div>
