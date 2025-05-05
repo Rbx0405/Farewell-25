@@ -1,10 +1,14 @@
 
+import React from 'react';
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
   const scrollToContent = () => {
-    document.getElementById('content')?.scrollIntoView({ behavior: 'smooth' });
+    const contentElement = document.getElementById('content');
+    if (contentElement) {
+      contentElement.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -14,7 +18,7 @@ const Hero = () => {
           Embracing the <span className="text-[#D4AF37]">Golden Hour</span>
         </h1>
         <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-8">
-          A nostalgic farewell for the ISE batch of 2025, celebrating our journey and the memories we've created together.
+          A nostalgic farewell for the ISE batch of 2025, celebrating our journey and the memories we&apos;ve created together.
         </p>
         <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-float">
           <Button 
@@ -22,6 +26,7 @@ const Hero = () => {
             size="icon"
             className="rounded-full h-12 w-12 border border-[#D4AF37]/50 hover:border-[#D4AF37] hover:bg-black/30"
             onClick={scrollToContent}
+            aria-label="Scroll to content"
           >
             <ArrowDown className="h-6 w-6 text-[#D4AF37]" />
           </Button>
