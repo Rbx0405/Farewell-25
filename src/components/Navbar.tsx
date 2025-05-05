@@ -54,7 +54,7 @@ const Navbar = () => {
       {mobileMenuOpen && (
         <nav className="md:hidden glass-dark mt-3 py-4">
           <div className="container flex flex-col gap-4 items-center">
-            <Link to="/" className="font-medium text-foreground/80 py-2">Home</Link>
+            <Link to="https://drive.google.com/drive/folders/1aToVz9EYmQX44L0gXSz3l7WfnEQAdz0z" className="font-medium text-foreground/80 py-2">Home</Link>
             <Button className="bg-[#D4AF37] text-black hover:bg-[#C5A028] font-semibold w-full mt-2">
               Share Memory
             </Button>

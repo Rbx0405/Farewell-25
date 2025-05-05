@@ -5,7 +5,7 @@ import { toast } from "@/components/ui/sonner";
 
 const FeaturedMemories = () => {
   // Fixed Google Drive link as a constant
-  const fixedLink = 'https://drive.google.com/drive/folders/1234567890abcdefghijklmnopqrstuvwxyz';
+  const fixedLink = 'https://drive.google.com/drive/folders/1aToVz9EYmQX44L0gXSz3l7WfnEQAdz0z';
 
   const handleShareMemory = async () => {
     try {
