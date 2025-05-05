@@ -28,14 +28,14 @@ const Navbar = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
-            <Sun className="h-8 w-8 text-amber-500" />
-            <span className="text-2xl font-serif font-semibold">Farewell<span className="text-amber-500">25</span></span>
+            <Sun className="h-8 w-8 text-[#D4AF37]" />
+            <span className="text-2xl font-serif font-semibold">Farewell<span className="text-[#D4AF37]">25</span></span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
             <Link to="/" className="font-medium text-foreground/80 hover:text-primary transition-colors">Home</Link>
-            <Button className="bg-golden-orange text-white hover:bg-amber-600 font-semibold">
+            <Button className="bg-[#D4AF37] text-black hover:bg-[#C5A028] font-semibold">
               Share Memory
             </Button>
           </nav>
@@ -55,7 +55,7 @@ const Navbar = () => {
         <nav className="md:hidden glass-dark mt-3 py-4">
           <div className="container flex flex-col gap-4 items-center">
             <Link to="/" className="font-medium text-foreground/80 py-2">Home</Link>
-            <Button className="bg-golden-orange text-white hover:bg-amber-600 font-semibold w-full mt-2">
+            <Button className="bg-[#D4AF37] text-black hover:bg-[#C5A028] font-semibold w-full mt-2">
               Share Memory
             </Button>
           </div>

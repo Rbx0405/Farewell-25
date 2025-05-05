@@ -26,16 +26,16 @@ const FeaturedMemories = () => {
     <section id="content" className="py-20 px-4 md:px-8">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Share Your Memory</h2>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[#D4AF37]">Share Your Memory</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Paste a link to your golden moment to share it with others.
           </p>
         </div>
 
-        <div className="bg-card border rounded-lg shadow-md p-6">
+        <div className="golden-card rounded-lg shadow-md p-6">
           <div className="space-y-4">
             <div className="relative">
-              <label htmlFor="memory-link" className="block text-sm font-medium mb-2">
+              <label htmlFor="memory-link" className="block text-sm font-medium mb-2 text-[#D4AF37]">
                 Memory Link
               </label>
               <div className="flex">
@@ -46,12 +46,12 @@ const FeaturedMemories = () => {
                     type="url"
                     value={fixedLink}
                     readOnly
-                    className="pl-10 pr-4 py-3 w-full rounded-l-md border border-r-0 focus:outline-none focus:ring-2 focus:ring-amber-500 bg-gray-50"
+                    className="pl-10 pr-4 py-3 w-full rounded-l-md border border-r-0 focus:outline-none focus:ring-2 focus:ring-[#D4AF37] bg-[#1a1a1a] text-foreground"
                   />
                 </div>
                 <Button 
                   type="button" 
-                  className="bg-golden-orange text-white hover:bg-amber-600 rounded-l-none flex items-center gap-2"
+                  className="bg-[#D4AF37] text-black hover:bg-[#C5A028] rounded-l-none flex items-center gap-2"
                   onClick={handleShareMemory}
                 >
                   <Copy size={16} />
