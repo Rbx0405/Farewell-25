@@ -14,7 +14,7 @@ const Hero = () => {
           Embracing the <span className="text-[#D4AF37]">Golden Hour</span>
         </h1>
         <p className="text-lg md:text-xl opacity-90 max-w-2xl mx-auto mb-8">
-          A nostalgic farewell to 2025, capturing moments in the warm glow of memories
+          A nostalgic farewell for the ISE batch of 2025, celebrating our journey and the memories we've created together.
         </p>
         <div className="absolute bottom-10 left-0 right-0 flex justify-center animate-float">
           <Button 
